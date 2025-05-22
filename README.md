@@ -1,6 +1,7 @@
 # CivicSight AI 🏙️🤖
 
 **Note:** This project is incomplete/Needs fixing.
+
 **CivicSight AI** is a real-time, AI-powered civic issue reporting platform. It enables citizens to report potholes, graffiti, trash, and more via image, audio, or text – while local governments receive auto-classified, geotagged, and prioritized reports.
 
 ---
