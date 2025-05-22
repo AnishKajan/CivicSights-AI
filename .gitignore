@@ -1,0 +1,11 @@
+__pycache__/
+.env
+*.db
+*.sqlite3
+*.pyc
+data/uploads/
+data/sample_inputs/
+.ipynb_checkpoints/
+node_modules/
+frontend/build/
+.vscode/

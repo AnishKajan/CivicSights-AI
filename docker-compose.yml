@@ -1,0 +1,22 @@
+services:
+  backend:
+    build: ./backend
+    container_name: civic-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    environment:
+      - DATABASE_URL=sqlite:///./app.db
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend/frontend-vite
+    container_name: civic-frontend
+    ports:
+      - "3005:5173"   # Vite uses port 5173 internally
+    volumes:
+      - ./frontend/frontend-vite:/app
+    stdin_open: true
+    tty: true
+    restart: unless-stopped

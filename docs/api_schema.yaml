@@ -1,0 +1,53 @@
+openapi: 3.0.0
+info:
+  title: CivicSight AI API
+  version: 1.0.0
+paths:
+  /api/v1/issues/submit:
+    post:
+      summary: Submit civic issue
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                user_id:
+                  type: string
+                latitude:
+                  type: number
+                longitude:
+                  type: number
+                description:
+                  type: string
+                image:
+                  type: string
+                  format: binary
+                audio:
+                  type: string
+                  format: binary
+      responses:
+        200:
+          description: Issue submitted
+  /api/v1/users/create:
+    post:
+      summary: Create user
+      parameters:
+        - name: user_id
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: name
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: email
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: User created
